@@ -2,51 +2,69 @@
 
 ## Description
 
-This project is a classic **Snake Game** built using **Python** and the **Turtle graphics module**. The player controls a snake that moves around the screen, eats food to grow longer, and avoids colliding with the walls or its own tail.
+This is a classic **Snake Game** built using Python and the Turtle graphics module. The player controls a snake that grows by eating food while avoiding collisions with walls and its own body.
 
-The game tracks both the **current score** and the **highest score** achieved during gameplay.
+The game features:
+
+* Score tracking
+* High score persistence
+* Sound effects for eating and collisions
+* Smooth movement and increasing difficulty
 
 ---
 
 ## Features
 
 * Smooth snake movement
-* Arrow key and **WASD** controls
+* Arrow key and WASD controls
 * Random food spawning
-* Snake grows when food is eaten
-* Collision detection with walls and snake tail
-* Score tracking
-* High score tracking
+* Score and high score tracking
+* Persistent high score (saved to file)
+* Sound effects for:
+
+  * Eating food
+  * Collisions / game over
+* Increasing speed as the snake grows
+* Collision detection with walls and tail
 
 ---
 
 ## Technologies Used
 
-* **Python 3**
-* **Turtle Graphics**
-* **Object-Oriented Programming (OOP)**
+* Python 3
+* Turtle Graphics
+* Pygame (for sound effects)
+* Object-Oriented Programming (OOP)
 
 ---
 
 ## Project Structure
 
-```
+```text
 snake-game/
 │
-├── main.py          # Main game loop and screen setup
-├── snake.py         # Snake class and movement logic
-├── food.py          # Food generation and random placement
+├── main.py          # Game loop and screen setup
+├── snake.py         # Snake movement and logic
+├── food.py          # Food generation and placement
 ├── scoreboard.py    # Score and high score display
-└── README.md        # Project documentation
+├── collision.wav    # Sound effect for collisions
+├── eat.wav          # Sound effect for eating
+├── README.md        # Documentation
 ```
 
 ---
 
 ## Installation
 
-1. Make sure **Python 3** is installed on your computer.
-2. Clone this repository or download the project files.
-3. Navigate to the project folder.
+1. Make sure Python 3 is installed.
+2. Install pygame (for sound support):
+
+```bash
+pip install pygame
+```
+
+3. Clone or download the repository.
+4. Ensure sound files (`eat.wav`, `collision.wav`) are in the project folder.
 
 ---
 
@@ -54,7 +72,7 @@ snake-game/
 
 Run the main file:
 
-```
+```bash
 python main.py
 ```
 
@@ -64,35 +82,38 @@ A game window will open and the snake will start moving.
 
 ## Controls
 
-| Key         | Action     |
-| ----------- | ---------- |
-| ↑ Arrow / W | Move Up    |
-| ↓ Arrow / S | Move Down  |
-| ← Arrow / A | Move Left  |
-| → Arrow / D | Move Right |
+| Key   | Action     |
+| ----- | ---------- |
+| ↑ / W | Move Up    |
+| ↓ / S | Move Down  |
+| ← / A | Move Left  |
+| → / D | Move Right |
 
 ---
 
 ## Game Rules
 
-1. Control the snake and guide it to the food.
-2. Each time the snake eats food, it grows longer and the score increases.
-3. Avoid hitting the walls.
-4. Avoid colliding with the snake’s own body.
-5. If a collision occurs, the game resets while keeping track of the highest score.
+1. Eat the red food to grow and score points.
+2. Avoid hitting the walls.
+3. Avoid colliding with your own tail.
+4. Game resets on collision but high score is saved.
+5. Sound effects enhance gameplay feedback.
 
 ---
 
-## Concepts Demonstrated
+## Concepts Practiced
 
-This project demonstrates several programming concepts:
+This project demonstrates:
 
 * Object-Oriented Programming
-* Class inheritance
 * Event-driven programming
 * Collision detection
 * Game loops
-* Working with multiple Python modules
+* File handling (high score persistence)
+* Multimedia integration (sound effects)
 
 ---
-.
+
+## Repository
+
+Hosted on GitHub: https://github.com/russel-yella/Snake-Game-using-python-OOP
